@@ -25,3 +25,7 @@ nav {
 .btn{
     background-color: #46D1E4;
 }
+.hamburguesa{
+    display: flex;
+    align-content: center;
+}
