@@ -17,3 +17,11 @@ nav {
 .recientes .card-header{
     background-color: #46D1E4;
 }
+.recientes{
+    position: fixed;
+    top:75px;
+    right: 10px;
+}
+.btn{
+    background-color: #46D1E4;
+}
