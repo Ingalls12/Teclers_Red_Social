@@ -14,7 +14,7 @@ function logger(req,res,next){
     console.log("Request received: ",req.protocol);
     next();
 }
-app.u
+app.use(logger)
 app.use(express.json())
 
 app.get("/",(req,res)=>{
@@ -26,7 +26,9 @@ app.get("/perfil",(req,res)=>{
 })
 app.post("/perfil",(req,res)=>{
 
-    usuario[trabajos].push(req.body.trabajos)
+    usuario["trabajos"].push(req.body.trabajo)
+    console.log(usuario);
+    res.send("Se ha agregado trabajo");
 })
 app.put("/perfil",(req,res)=>{
 
@@ -36,3 +38,10 @@ app.listen(3000,()=>{
     console.log("Se inicio el servidor");
 })
 
+app.use((req,res)=>{
+    res.status(404).json(
+        {
+            "msg":"No se encuentra el endpoint"
+        }
+    )
+})
