@@ -1,0 +1,24 @@
+/*Header navbar style*/
+header nav div .btn{
+    background-color: white ;
+    color: black;
+}
+/*Card styles (form)*/
+main div.card{
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.356);
+}
+/*Form style*/
+main div.form-floating{
+    margin-top: 5px;
+}
+/*input style (user & pass fields)*/
+main input#password, main input#email{
+    margin-bottom: 10px;
+}
+/*Buttons style*/
+main button.btn{
+    margin: 5px;
+}
