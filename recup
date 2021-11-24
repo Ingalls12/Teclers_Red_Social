@@ -1,0 +1,60 @@
+ <!--Este es el HTML de la navbar con el campo de búsqueda activado-->
+ <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #A070B7;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./img/tecla.jpg" alt="" width="40" height="40"
+            class="d-inline-block align-text-center rounded-circle">
+          Teclers
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search..." autocomplete="off"
+              aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                </path>
+              </svg></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+<!--Este es el CSS de la navbar -->
+    /*Header navbar style*/
+header nav div .btn{
+    background-color: white ;
+    color: black;
+}
+/*Card styles (form)*/
+main div.card{
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.356);
+}
+/*Form style*/
+main div.form-floating{
+    margin-top: 5px;
+}
+/*input style (user & pass fields)*/
+main input#password, main input#email{
+    margin-bottom: 10px;
+}
+/*Buttons style*/
+main button.btn{
+    margin: 5px;
+}
