@@ -19,8 +19,6 @@ app.listen(3000,()=>{
 
 app.use("/",require("./rutas/rutas"));
 
-
-
 app.use((req,res,next)=>{//Middleware final para manejo de endpoint no existente
     res.status(404).json({msg:'Tu solicitud no se puede atender en este momento!'});
 });

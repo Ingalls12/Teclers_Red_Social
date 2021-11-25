@@ -34,9 +34,23 @@ router.get("/perfil",(req,res)=>{
 })
 router.post("/perfil",(req,res)=>{
 
-    usuario["trabajos"].push(req.body.trabajo)
-    console.log(usuario);
-    res.send("Se ha agregado trabajo");
+    let query = `INSERT INTO usuarios("nombres","apellidos","edad","pais","ciudad","estudios","perfil_linkedin","hobbies")VALUES(${req.body.nombre},${req.body.apellidos},${req.body.edad},${req.body.pais},${req.body.ciudad},${req.body.estudios},${req.body.perfil_linkedin},${req.body.hobbies});`;
+    console.log(query)
+    sequel.query(query,{type:sequel.QueryTypes.INSERT})
+    .then(datos=>{
+        let usuario = datos;
+        console.log(usuario);
+        res.status(200).json({
+            msg:"Consulta ejecutada con exito",
+            data:usuario
+        })
+    })
+    .catch((error)=>{
+        console.log(error)
+        res.status(500).json({
+            error:"Error Consulta  no ejecutada"
+        })
+    })
 })
 router.put("/perfil",(req,res)=>{
 
