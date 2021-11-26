@@ -34,7 +34,7 @@ router.get("/perfil",(req,res)=>{
 })
 router.post("/perfil",(req,res)=>{
 
-    let query = `INSERT INTO usuarios("nombres","apellidos","edad","pais","ciudad","estudios","perfil_linkedin","hobbies")VALUES(${req.body.nombre},${req.body.apellidos},${req.body.edad},${req.body.pais},${req.body.ciudad},${req.body.estudios},${req.body.perfil_linkedin},${req.body.hobbies});`;
+    let query = `INSERT INTO usuarios(nombres,apellidos,edad,pais,ciudad,estudios,perfil_linkedin,hobbies)VALUES("${req.body.nombres}","${req.body.apellidos}","${req.body.edad}","${req.body.pais}","${req.body.ciudad}","${req.body.estudios}","${req.body.perfil_linkedin}","${req.body.hobbies}");`;
     console.log(query)
     sequel.query(query,{type:sequel.QueryTypes.INSERT})
     .then(datos=>{

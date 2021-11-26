@@ -14,6 +14,10 @@ nav {
     width: 60px;
     height: 60px;
 }
+.foto-perfil img:hover{
+    width: 61px;
+    height: 61px;
+}
 .recientes .card-header{
     background-color: #46D1E4;
 }
