@@ -32,4 +32,18 @@ nav {
 .hamburguesa{
     display: flex;
     align-content: center;
+    position: absolute;
+    right: 30px;
+}
+.msg{
+    background-color: #46D1E4;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border: #A070B7 solid 0.5px;
+}
+.msg img{
+    
+    width: 50px;
+    height: 50px;
 }
