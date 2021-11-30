@@ -131,3 +131,23 @@ main{
     width: 3.5rem;
     height: 3rem;
 }
+/*media queries*/
+@media (max-width: 1450px) {
+    .cards_amigos{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+    }
+}
+@media (max-width: 1100px) {
+    .cards_amigos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+    }
+    .h_amigos{
+        padding-left: 1rem;
+        color: #fffa08;
+        font-size: 16px;
+    }
+}
