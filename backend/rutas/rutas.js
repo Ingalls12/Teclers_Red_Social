@@ -8,8 +8,8 @@ const sequel = require("./sequel");
 
 
 router.post("/usuarios",(req,res)=>{
-    let query = `SELECT * FROM usuarios_tecla WHERE nombres LIKE "${req.body.json}";`;
-    console.log(query)
+    let query = `SELECT * FROM usuarios_tecla WHERE nombres LIKE "${req.body.usuario}";`;
+
     sequel.query(query,{type:sequel.QueryTypes.SELECT})
     .then(datos=>{
         let usuario = datos;
@@ -25,8 +25,6 @@ router.post("/usuarios",(req,res)=>{
             error:"No se encontro el usuario"
         })
     })
-    
-  
 })
 
 router.post("/crear_usuarios",(req,res)=>{
