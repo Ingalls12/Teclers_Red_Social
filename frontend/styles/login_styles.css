@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color:#46D1E4;
 }
@@ -29,6 +36,7 @@ main input#password, main input#email{
 main button.btn{
     margin: 5px;
     background-color: #A070B7;
+    border: none;
 }
 main button.btn:hover{
     background-color: #46D1E4;
