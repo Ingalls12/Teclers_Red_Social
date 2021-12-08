@@ -1,9 +1,6 @@
-let nombre = document.querySelector("#nombre")
-let estudios = document.querySelector("#nombre")
-
-nombre.textContent = "Pedro"
-estudios.textContent =""
+let nombre = document.getElementById("nombre");
 let url = "http://localhost:3000/usuarios"
+
 fetch(url,
     {
         method:"POST",
@@ -15,6 +12,8 @@ fetch(url,
         })
     }).then(response => response.json())
         .then(data=>{
-            const data_usuario = data
+            
+            console.log(data)
+            nombre.textContent = data.data[0].nombres
     })
     
