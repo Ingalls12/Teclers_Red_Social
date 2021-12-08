@@ -19,8 +19,11 @@ app.listen(3000,()=>{
 
 app.use("/",require("./rutas/rutas"));
 
-app.use((req,res,next)=>{//Middleware final para manejo de endpoint no existente
-    res.status(404).json({msg:'Tu solicitud no se puede atender en este momento!'});
+app.use((req,res,next)=>{//Middleware final para manejo de 
+    res.status(404).json({
+        msg:'Tu solicitud no se puede atender en este momento!',
+        err:'endpoint no existente'
+    });
 });
 app.use((err, req, res, next)=> {//Middleware para el manejo de errores del sistema
     console.error("Error del sisetema --> ",err.stack);

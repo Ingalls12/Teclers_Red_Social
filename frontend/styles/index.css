@@ -3,6 +3,11 @@ nav {
     margin: 10px 10px;
 
 }
+#pefil{
+    position: relative;
+    top: 5px;
+    right: 100px;
+}
 .card {
     background-color: #A070B7;
     border: -10px;

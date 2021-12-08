@@ -65,7 +65,7 @@
           </div>
           <div class="modal-body">
             <!--Form nuevo usuario-->
-            <form class="row g-3">
+            <form class="row g-3 " id="form-usuario-nuevo" method="post">
               <div class="col-md-6">
                 <label for="inputName" class="form-label">¿Cuál es tu nombre?</label>
                 <input type="text" class="form-control" id="inputName">
@@ -103,13 +103,14 @@
                   </label>
                 </div>
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atrás</button>
+                <button type="submit" id="crear-usuario" class="btn btn-primary">Crear cuenta de usuario</button>
+              </div>
             </form>
             <!--Termina form nuevo usuario-->
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atrás</button>
-            <button type="submit" class="btn btn-primary">Crear cuenta de usuario</button>
-          </div>
+          
         </div>
       </div>
     </div>

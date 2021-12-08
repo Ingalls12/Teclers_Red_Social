@@ -6,6 +6,7 @@ const sequel = require("./sequel");
 
 
 
+<<<<<<< HEAD
 router.get("/", (req, res) => {
 
     console.log("Inicio")
@@ -23,6 +24,19 @@ router.get("/usuarios", (req, res) => {
                 msg: "Consulta ejecutada con exito",
                 data: usuario
             })
+=======
+
+router.post("/usuarios",(req,res)=>{
+    let query = `SELECT * FROM usuarios_tecla WHERE nombres LIKE "${req.body.usuario}";`;
+
+    sequel.query(query,{type:sequel.QueryTypes.SELECT})
+    .then(datos=>{
+        let usuario = datos;
+        console.log(usuario);
+        res.status(200).json({
+            msg:"Consulta ejecutada con exito",
+            data:usuario
+>>>>>>> origin/master
         })
         .catch((error) => {
             console.log(error)
@@ -30,6 +44,7 @@ router.get("/usuarios", (req, res) => {
                 error: "No se encontro el usuario"
             })
         })
+<<<<<<< HEAD
 
 })
 router.post("/usuarios", (req, res) => {
@@ -45,6 +60,22 @@ router.post("/usuarios", (req, res) => {
                 msg: "Consulta ejecutada con exito",
                 data: usuario
             })
+=======
+    })
+})
+
+router.post("/crear_usuarios",(req,res)=>{
+
+    let query = `INSERT INTO usuarios_tecla(nombres,apellidos,correo,contraseña,fecha_nac,pais,ciudad,estudios,perfil_linkedin,hobbies)VALUES("${req.body.nombres}","${req.body.apellidos}","${req.body.correo}","${req.body.contraseña}","${req.body.fecha_nac}","${req.body.pais}","${req.body.ciudad}","${req.body.estudios}","${req.body.perfil_linkedin}","${req.body.hobbies}");`;
+    console.log(query)
+    sequel.query(query,{type:sequel.QueryTypes.INSERT})
+    .then(datos=>{
+        let usuario = datos;
+        console.log(usuario);
+        res.status(200).json({
+            msg:"Consulta ejecutada con exito",
+            data:"Se agrego el usuario"
+>>>>>>> origin/master
         })
         .catch((error) => {
             console.log(error)
@@ -53,8 +84,12 @@ router.post("/usuarios", (req, res) => {
             })
         })
 })
+<<<<<<< HEAD
 router.put("/perfil", (req, res) => {
 
 })
 
 module.exports = router;
+=======
+module.exports=router;
+>>>>>>> origin/master
