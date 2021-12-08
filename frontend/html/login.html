@@ -36,29 +36,31 @@
         <div class="col-lg-6" id="main_form">
           <div class="card">
             <h3 class="card-title">Iniciar sesión o crea una nueva cuenta</h3>
-            <div class="form-floating">
-              <input type="email" class="form-control" id="email" placeholder="name@example.com">
-              <label for="email">Correo electrónico</label>
-            </div>
-            <div class="form-floating">
-              <input type="password" class="form-control" id="password" placeholder="Password">
-              <label for="password">Contraseña</label>
-            </div>
-            <button class="btn btn-primary col-4 mx-auto" type="submit">Iniciar sesión</button>
-            <!--Trigger de modal-->
-            <button type="button" class="btn btn-primary col-4 mx-auto" data-bs-toggle="modal" data-bs-target="#modal"
-              id="sign_up">Crear una nueva cuenta</button>
-            <!--Termina trigger de modal-->
+            <form action="" method="post">
+              <div class="form-floating">
+                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required="true">
+                  <label for="email">Correo electrónico</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" class="form-control" id="password" placeholder="Contraseña" required="true">
+                <label for="password">Contraseña</label>
+              </div>
+              <button class="btn btn-primary col-4 mx-auto" id="boton_validar" type="submit">Iniciar sesión</button>
+              <!--Trigger de modal-->
+              <button type="button" class="btn btn-primary col-4 mx-auto" data-bs-toggle="modal" data-bs-target="#modal"
+                id="sign_up">Crear una nueva cuenta</button>
+              <!--Termina trigger de modal-->
+            </form>
           </div>
         </div>
       </div>
     </div>
     <!--modal-->
-    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Crear una nueva cuenta</h5>
+            <h5 class="modal-title" id="ModalLabel">Crear una nueva cuenta</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -74,7 +76,7 @@
               </div>
               <div class="col-md-6">
                 <label for="inputNewEmail" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-c ontrol" id="inputNewEmail">
+                <input type="email" class="form-control" id="inputNewEmail">
               </div>
               <div class="col-md-6">
                 <label for="inputNewPassword" class="form-label">Contraseña</label>
@@ -117,6 +119,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+
 </body>
 
 </html>
