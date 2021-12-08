@@ -43,7 +43,7 @@ router.post("/usuarios",(req,res)=>{
         console.log(usuario);
         res.status(200).json({
             msg:"Consulta ejecutada con exito",
-            data:usuario
+            data:"Se agrego el usuario"
         })
     })
     .catch((error)=>{
