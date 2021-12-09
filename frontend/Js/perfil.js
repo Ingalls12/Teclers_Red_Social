@@ -18,6 +18,7 @@ let hobbies = document.querySelector("#hobbies")
     perfil_linkedin.innerHTML += "48864614464"
     hobbies.innerHTML += "leer"
 } */
+// se hace un fetch para conseguir la información con la que llenaremos nuestra pagina de perfil
 let url = "http://localhost:3000/usuarios"
 fetch(url,
     {
