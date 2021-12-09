@@ -1,8 +1,23 @@
-let nombre = document.querySelector("#nombre")
-let estudios = document.querySelector("#nombre")
+let nombre = document.querySelector("#nombres")
+let estudios = document.querySelector("#estudios")
+let pais = document.querySelector("#pais")
+let ciudad = document.querySelector("#ciudad")
+let fecha_nac = document.querySelector("#fecha_nac")
+let perfil_linkedin = document.querySelector("#perfil_linkedin")
+let hobbies = document.querySelector("#hobbies")
 
-nombre.textContent = "Pedro"
-estudios.textContent =""
+
+
+
+/* window.onload = () =>{
+    nombre.innerHTML += "Pedro"
+    estudios.innerHTML +="Ingenieria"
+    pais.innerHTML +="México"
+    ciudad.innerHTML +="D.F."
+    fecha_nac.innerHTML += "10/05/2000"
+    perfil_linkedin.innerHTML += "48864614464"
+    hobbies.innerHTML += "leer"
+} */
 let url = "http://localhost:3000/usuarios"
 fetch(url,
     {
@@ -15,6 +30,17 @@ fetch(url,
         })
     }).then(response => response.json())
         .then(data=>{
-            const data_usuario = data
+            
+            console.log(data)
+            nombre.innerHTML += data.data[0].nombres
+            estudios.innerHTML += data.data[0].estudios
+            pais.innerHTML +=data.data[0].pais
+            ciudad.innerHTML +=data.data[0].ciudad
+            fecha_nac.innerHTML += data.data[0].fecha_nac
+            perfil_linkedin.innerHTML += data.data[0].perfil_linkedin
+            hobbies.innerHTML += data.data[0].hobbies
     })
     
+
+    
+  
